@@ -1,0 +1,1377 @@
+[
+  {
+    "datum": "25.02.2020",
+    "taeglicheErkrankungen": 2,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "26.02.2020",
+    "taeglicheErkrankungen": 0,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "27.02.2020",
+    "taeglicheErkrankungen": 3,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "28.02.2020",
+    "taeglicheErkrankungen": 5,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "29.02.2020",
+    "taeglicheErkrankungen": 2,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "01.03.2020",
+    "taeglicheErkrankungen": 1,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "02.03.2020",
+    "taeglicheErkrankungen": 7,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "03.03.2020",
+    "taeglicheErkrankungen": 7,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "04.03.2020",
+    "taeglicheErkrankungen": 11,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "05.03.2020",
+    "taeglicheErkrankungen": 16,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "06.03.2020",
+    "taeglicheErkrankungen": 19,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "07.03.2020",
+    "taeglicheErkrankungen": 18,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "08.03.2020",
+    "taeglicheErkrankungen": 27,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "09.03.2020",
+    "taeglicheErkrankungen": 33,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "10.03.2020",
+    "taeglicheErkrankungen": 58,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "11.03.2020",
+    "taeglicheErkrankungen": 110,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "12.03.2020",
+    "taeglicheErkrankungen": 100,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "13.03.2020",
+    "taeglicheErkrankungen": 208,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "14.03.2020",
+    "taeglicheErkrankungen": 185,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "15.03.2020",
+    "taeglicheErkrankungen": 199,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "16.03.2020",
+    "taeglicheErkrankungen": 222,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "17.03.2020",
+    "taeglicheErkrankungen": 359,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "18.03.2020",
+    "taeglicheErkrankungen": 358,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "19.03.2020",
+    "taeglicheErkrankungen": 386,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "20.03.2020",
+    "taeglicheErkrankungen": 532,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "21.03.2020",
+    "taeglicheErkrankungen": 471,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "22.03.2020",
+    "taeglicheErkrankungen": 625,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "23.03.2020",
+    "taeglicheErkrankungen": 750,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "24.03.2020",
+    "taeglicheErkrankungen": 685,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "25.03.2020",
+    "taeglicheErkrankungen": 733,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "26.03.2020",
+    "taeglicheErkrankungen": 1061,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "27.03.2020",
+    "taeglicheErkrankungen": 831,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "28.03.2020",
+    "taeglicheErkrankungen": 677,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "29.03.2020",
+    "taeglicheErkrankungen": 528,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "30.03.2020",
+    "taeglicheErkrankungen": 623,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "31.03.2020",
+    "taeglicheErkrankungen": 576,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "01.04.2020",
+    "taeglicheErkrankungen": 511,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "02.04.2020",
+    "taeglicheErkrankungen": 462,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "03.04.2020",
+    "taeglicheErkrankungen": 418,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "04.04.2020",
+    "taeglicheErkrankungen": 296,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "05.04.2020",
+    "taeglicheErkrankungen": 173,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "06.04.2020",
+    "taeglicheErkrankungen": 275,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "07.04.2020",
+    "taeglicheErkrankungen": 306,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "08.04.2020",
+    "taeglicheErkrankungen": 270,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "09.04.2020",
+    "taeglicheErkrankungen": 293,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "10.04.2020",
+    "taeglicheErkrankungen": 372,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "11.04.2020",
+    "taeglicheErkrankungen": 212,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "12.04.2020",
+    "taeglicheErkrankungen": 109,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "13.04.2020",
+    "taeglicheErkrankungen": 89,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "14.04.2020",
+    "taeglicheErkrankungen": 147,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "15.04.2020",
+    "taeglicheErkrankungen": 119,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "16.04.2020",
+    "taeglicheErkrankungen": 127,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "17.04.2020",
+    "taeglicheErkrankungen": 97,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "18.04.2020",
+    "taeglicheErkrankungen": 62,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "19.04.2020",
+    "taeglicheErkrankungen": 48,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "20.04.2020",
+    "taeglicheErkrankungen": 60,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "21.04.2020",
+    "taeglicheErkrankungen": 63,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "22.04.2020",
+    "taeglicheErkrankungen": 81,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "23.04.2020",
+    "taeglicheErkrankungen": 63,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "24.04.2020",
+    "taeglicheErkrankungen": 83,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "25.04.2020",
+    "taeglicheErkrankungen": 58,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "26.04.2020",
+    "taeglicheErkrankungen": 35,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "27.04.2020",
+    "taeglicheErkrankungen": 65,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "28.04.2020",
+    "taeglicheErkrankungen": 52,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "29.04.2020",
+    "taeglicheErkrankungen": 55,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "30.04.2020",
+    "taeglicheErkrankungen": 65,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "01.05.2020",
+    "taeglicheErkrankungen": 30,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "02.05.2020",
+    "taeglicheErkrankungen": 32,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "03.05.2020",
+    "taeglicheErkrankungen": 16,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "04.05.2020",
+    "taeglicheErkrankungen": 26,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "05.05.2020",
+    "taeglicheErkrankungen": 45,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "06.05.2020",
+    "taeglicheErkrankungen": 53,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "07.05.2020",
+    "taeglicheErkrankungen": 34,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "08.05.2020",
+    "taeglicheErkrankungen": 47,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "09.05.2020",
+    "taeglicheErkrankungen": 38,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "10.05.2020",
+    "taeglicheErkrankungen": 11,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "11.05.2020",
+    "taeglicheErkrankungen": 73,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "12.05.2020",
+    "taeglicheErkrankungen": 38,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "13.05.2020",
+    "taeglicheErkrankungen": 61,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "14.05.2020",
+    "taeglicheErkrankungen": 43,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "15.05.2020",
+    "taeglicheErkrankungen": 81,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "16.05.2020",
+    "taeglicheErkrankungen": 17,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "17.05.2020",
+    "taeglicheErkrankungen": 26,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "18.05.2020",
+    "taeglicheErkrankungen": 46,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "19.05.2020",
+    "taeglicheErkrankungen": 52,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "20.05.2020",
+    "taeglicheErkrankungen": 45,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "21.05.2020",
+    "taeglicheErkrankungen": 27,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "22.05.2020",
+    "taeglicheErkrankungen": 31,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "23.05.2020",
+    "taeglicheErkrankungen": 27,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "24.05.2020",
+    "taeglicheErkrankungen": 32,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "25.05.2020",
+    "taeglicheErkrankungen": 26,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "26.05.2020",
+    "taeglicheErkrankungen": 26,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "27.05.2020",
+    "taeglicheErkrankungen": 34,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "28.05.2020",
+    "taeglicheErkrankungen": 28,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "29.05.2020",
+    "taeglicheErkrankungen": 29,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "30.05.2020",
+    "taeglicheErkrankungen": 46,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "31.05.2020",
+    "taeglicheErkrankungen": 5,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "01.06.2020",
+    "taeglicheErkrankungen": 19,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "02.06.2020",
+    "taeglicheErkrankungen": 16,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "03.06.2020",
+    "taeglicheErkrankungen": 36,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "04.06.2020",
+    "taeglicheErkrankungen": 34,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "05.06.2020",
+    "taeglicheErkrankungen": 60,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "06.06.2020",
+    "taeglicheErkrankungen": 19,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "07.06.2020",
+    "taeglicheErkrankungen": 43,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "08.06.2020",
+    "taeglicheErkrankungen": 28,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "09.06.2020",
+    "taeglicheErkrankungen": 16,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "10.06.2020",
+    "taeglicheErkrankungen": 36,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "11.06.2020",
+    "taeglicheErkrankungen": 21,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "12.06.2020",
+    "taeglicheErkrankungen": 32,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "13.06.2020",
+    "taeglicheErkrankungen": 18,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "14.06.2020",
+    "taeglicheErkrankungen": 23,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "15.06.2020",
+    "taeglicheErkrankungen": 56,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "16.06.2020",
+    "taeglicheErkrankungen": 10,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "17.06.2020",
+    "taeglicheErkrankungen": 24,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "18.06.2020",
+    "taeglicheErkrankungen": 47,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "19.06.2020",
+    "taeglicheErkrankungen": 54,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "20.06.2020",
+    "taeglicheErkrankungen": 19,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "21.06.2020",
+    "taeglicheErkrankungen": 35,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "22.06.2020",
+    "taeglicheErkrankungen": 30,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "23.06.2020",
+    "taeglicheErkrankungen": 43,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "24.06.2020",
+    "taeglicheErkrankungen": 30,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "25.06.2020",
+    "taeglicheErkrankungen": 50,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "26.06.2020",
+    "taeglicheErkrankungen": 65,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "27.06.2020",
+    "taeglicheErkrankungen": 62,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "28.06.2020",
+    "taeglicheErkrankungen": 65,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "29.06.2020",
+    "taeglicheErkrankungen": 45,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "30.06.2020",
+    "taeglicheErkrankungen": 108,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "01.07.2020",
+    "taeglicheErkrankungen": 85,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "02.07.2020",
+    "taeglicheErkrankungen": 98,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "03.07.2020",
+    "taeglicheErkrankungen": 126,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "04.07.2020",
+    "taeglicheErkrankungen": 116,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "05.07.2020",
+    "taeglicheErkrankungen": 76,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "06.07.2020",
+    "taeglicheErkrankungen": 67,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "07.07.2020",
+    "taeglicheErkrankungen": 97,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "08.07.2020",
+    "taeglicheErkrankungen": 101,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "09.07.2020",
+    "taeglicheErkrankungen": 92,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "10.07.2020",
+    "taeglicheErkrankungen": 94,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "11.07.2020",
+    "taeglicheErkrankungen": 109,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "12.07.2020",
+    "taeglicheErkrankungen": 53,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "13.07.2020",
+    "taeglicheErkrankungen": 98,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "14.07.2020",
+    "taeglicheErkrankungen": 126,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "15.07.2020",
+    "taeglicheErkrankungen": 124,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "16.07.2020",
+    "taeglicheErkrankungen": 168,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "17.07.2020",
+    "taeglicheErkrankungen": 136,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "18.07.2020",
+    "taeglicheErkrankungen": 78,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "19.07.2020",
+    "taeglicheErkrankungen": 90,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "20.07.2020",
+    "taeglicheErkrankungen": 99,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "21.07.2020",
+    "taeglicheErkrankungen": 143,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "22.07.2020",
+    "taeglicheErkrankungen": 170,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "23.07.2020",
+    "taeglicheErkrankungen": 130,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "24.07.2020",
+    "taeglicheErkrankungen": 154,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "25.07.2020",
+    "taeglicheErkrankungen": 127,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "26.07.2020",
+    "taeglicheErkrankungen": 99,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "27.07.2020",
+    "taeglicheErkrankungen": 115,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "28.07.2020",
+    "taeglicheErkrankungen": 166,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "29.07.2020",
+    "taeglicheErkrankungen": 108,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "30.07.2020",
+    "taeglicheErkrankungen": 206,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "31.07.2020",
+    "taeglicheErkrankungen": 128,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "01.08.2020",
+    "taeglicheErkrankungen": 63,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "02.08.2020",
+    "taeglicheErkrankungen": 85,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "03.08.2020",
+    "taeglicheErkrankungen": 93,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "04.08.2020",
+    "taeglicheErkrankungen": 110,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "05.08.2020",
+    "taeglicheErkrankungen": 165,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "06.08.2020",
+    "taeglicheErkrankungen": 139,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "07.08.2020",
+    "taeglicheErkrankungen": 111,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "08.08.2020",
+    "taeglicheErkrankungen": 106,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "09.08.2020",
+    "taeglicheErkrankungen": 81,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "10.08.2020",
+    "taeglicheErkrankungen": 169,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "11.08.2020",
+    "taeglicheErkrankungen": 202,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "12.08.2020",
+    "taeglicheErkrankungen": 196,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "13.08.2020",
+    "taeglicheErkrankungen": 258,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "14.08.2020",
+    "taeglicheErkrankungen": 347,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "15.08.2020",
+    "taeglicheErkrankungen": 178,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "16.08.2020",
+    "taeglicheErkrankungen": 170,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "17.08.2020",
+    "taeglicheErkrankungen": 291,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "18.08.2020",
+    "taeglicheErkrankungen": 325,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "19.08.2020",
+    "taeglicheErkrankungen": 446,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "20.08.2020",
+    "taeglicheErkrankungen": 388,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "21.08.2020",
+    "taeglicheErkrankungen": 349,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "22.08.2020",
+    "taeglicheErkrankungen": 273,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "23.08.2020",
+    "taeglicheErkrankungen": 217,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "24.08.2020",
+    "taeglicheErkrankungen": 233,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "25.08.2020",
+    "taeglicheErkrankungen": 382,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "26.08.2020",
+    "taeglicheErkrankungen": 367,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "27.08.2020",
+    "taeglicheErkrankungen": 270,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "28.08.2020",
+    "taeglicheErkrankungen": 417,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "29.08.2020",
+    "taeglicheErkrankungen": 226,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "30.08.2020",
+    "taeglicheErkrankungen": 293,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "31.08.2020",
+    "taeglicheErkrankungen": 230,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "01.09.2020",
+    "taeglicheErkrankungen": 325,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "02.09.2020",
+    "taeglicheErkrankungen": 487,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "03.09.2020",
+    "taeglicheErkrankungen": 414,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "04.09.2020",
+    "taeglicheErkrankungen": 412,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "05.09.2020",
+    "taeglicheErkrankungen": 221,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "06.09.2020",
+    "taeglicheErkrankungen": 316,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "07.09.2020",
+    "taeglicheErkrankungen": 551,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "08.09.2020",
+    "taeglicheErkrankungen": 623,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "09.09.2020",
+    "taeglicheErkrankungen": 746,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "10.09.2020",
+    "taeglicheErkrankungen": 692,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "11.09.2020",
+    "taeglicheErkrankungen": 975,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "12.09.2020",
+    "taeglicheErkrankungen": 453,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "13.09.2020",
+    "taeglicheErkrankungen": 487,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "14.09.2020",
+    "taeglicheErkrankungen": 886,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "15.09.2020",
+    "taeglicheErkrankungen": 852,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "16.09.2020",
+    "taeglicheErkrankungen": 919,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "17.09.2020",
+    "taeglicheErkrankungen": 908,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "18.09.2020",
+    "taeglicheErkrankungen": 969,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "19.09.2020",
+    "taeglicheErkrankungen": 717,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "20.09.2020",
+    "taeglicheErkrankungen": 525,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "21.09.2020",
+    "taeglicheErkrankungen": 698,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "22.09.2020",
+    "taeglicheErkrankungen": 769,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "23.09.2020",
+    "taeglicheErkrankungen": 914,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "24.09.2020",
+    "taeglicheErkrankungen": 742,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "25.09.2020",
+    "taeglicheErkrankungen": 819,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "26.09.2020",
+    "taeglicheErkrankungen": 686,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "27.09.2020",
+    "taeglicheErkrankungen": 648,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "28.09.2020",
+    "taeglicheErkrankungen": 740,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "29.09.2020",
+    "taeglicheErkrankungen": 795,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "30.09.2020",
+    "taeglicheErkrankungen": 987,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "01.10.2020",
+    "taeglicheErkrankungen": 946,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "02.10.2020",
+    "taeglicheErkrankungen": 1063,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "03.10.2020",
+    "taeglicheErkrankungen": 776,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "04.10.2020",
+    "taeglicheErkrankungen": 781,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "05.10.2020",
+    "taeglicheErkrankungen": 982,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "06.10.2020",
+    "taeglicheErkrankungen": 1152,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "07.10.2020",
+    "taeglicheErkrankungen": 1375,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "08.10.2020",
+    "taeglicheErkrankungen": 1234,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "09.10.2020",
+    "taeglicheErkrankungen": 1231,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "10.10.2020",
+    "taeglicheErkrankungen": 1054,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "11.10.2020",
+    "taeglicheErkrankungen": 981,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "12.10.2020",
+    "taeglicheErkrankungen": 1177,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "13.10.2020",
+    "taeglicheErkrankungen": 1415,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "14.10.2020",
+    "taeglicheErkrankungen": 1508,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "15.10.2020",
+    "taeglicheErkrankungen": 1527,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "16.10.2020",
+    "taeglicheErkrankungen": 1766,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "17.10.2020",
+    "taeglicheErkrankungen": 1471,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "18.10.2020",
+    "taeglicheErkrankungen": 1293,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "19.10.2020",
+    "taeglicheErkrankungen": 1779,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "20.10.2020",
+    "taeglicheErkrankungen": 2025,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "21.10.2020",
+    "taeglicheErkrankungen": 2720,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "22.10.2020",
+    "taeglicheErkrankungen": 3183,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "23.10.2020",
+    "taeglicheErkrankungen": 3250,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "24.10.2020",
+    "taeglicheErkrankungen": 3160,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "25.10.2020",
+    "taeglicheErkrankungen": 2484,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "26.10.2020",
+    "taeglicheErkrankungen": 2738,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "27.10.2020",
+    "taeglicheErkrankungen": 4117,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "28.10.2020",
+    "taeglicheErkrankungen": 4254,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "29.10.2020",
+    "taeglicheErkrankungen": 5329,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "30.10.2020",
+    "taeglicheErkrankungen": 5431,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "31.10.2020",
+    "taeglicheErkrankungen": 4685,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "01.11.2020",
+    "taeglicheErkrankungen": 4222,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "02.11.2020",
+    "taeglicheErkrankungen": 5049,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "03.11.2020",
+    "taeglicheErkrankungen": 6163,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "04.11.2020",
+    "taeglicheErkrankungen": 7159,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "05.11.2020",
+    "taeglicheErkrankungen": 6843,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "06.11.2020",
+    "taeglicheErkrankungen": 7427,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "07.11.2020",
+    "taeglicheErkrankungen": 6094,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "08.11.2020",
+    "taeglicheErkrankungen": 5162,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "09.11.2020",
+    "taeglicheErkrankungen": 6466,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "10.11.2020",
+    "taeglicheErkrankungen": 7621,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "11.11.2020",
+    "taeglicheErkrankungen": 9165,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "12.11.2020",
+    "taeglicheErkrankungen": 8322,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "13.11.2020",
+    "taeglicheErkrankungen": 7070,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "14.11.2020",
+    "taeglicheErkrankungen": 5024,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "15.11.2020",
+    "taeglicheErkrankungen": 4454,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "16.11.2020",
+    "taeglicheErkrankungen": 6213,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "17.11.2020",
+    "taeglicheErkrankungen": 7486,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "18.11.2020",
+    "taeglicheErkrankungen": 6760,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "19.11.2020",
+    "taeglicheErkrankungen": 6106,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "20.11.2020",
+    "taeglicheErkrankungen": 6067,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "21.11.2020",
+    "taeglicheErkrankungen": 4305,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "22.11.2020",
+    "taeglicheErkrankungen": 2826,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "23.11.2020",
+    "taeglicheErkrankungen": 4532,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "24.11.2020",
+    "taeglicheErkrankungen": 5423,
+    "Timestamp": "2020-11-26T17:02:00"
+  },
+  {
+    "datum": "25.11.2020",
+    "taeglicheErkrankungen": 3983,
+    "Timestamp": "2020-11-26T17:02:00"
+  }
+]
