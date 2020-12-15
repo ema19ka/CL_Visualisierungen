@@ -17,13 +17,13 @@ h2 {
 .grid line {
     stroke: rgb(255, 255, 255);
     stroke-opacity: 0.7;
-    shape-rendering: crispEdges;
+    /* shape-rendering: crispEdges; */
   }
   
   .grid path {
     stroke: rgb(255, 255, 255);
     stroke-opacity: 0.7;
-    shape-rendering: crispEdges;
+    /* shape-rendering: crispEdges; */
   }
 
   body {

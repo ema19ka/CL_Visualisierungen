@@ -2,6 +2,14 @@
 // richtige Quelle einbinden
 // runde Ecken PROFISORISCH --> siehe ab Zeile 116 "HelpRect"
 
+/**
+ * Ideen: mehr mit Parameter arbeiten
+ * damit man das Bundesland auswählen kann 
+ * und den letzten Tag im Datensatz
+ * Bundesland kommt von Dropdown und dann Vergleich mit Daten 
+ * vllt alte Datensätze löschen & dann muss man nur mehr das Bundesland auswählen? 
+ */
+
 
 async function drawLineChart(){
 

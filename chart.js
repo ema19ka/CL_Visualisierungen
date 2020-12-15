@@ -1,8 +1,15 @@
 /**
- * to-do: 
+ * TO-DO:  
+ * 
  * Breite verstehen? 
+ * -> Path hat innerhalb eines g Elementes links einen Overflow, außer wenn man seit Beginn einstellt 
+ * -> but why though?
+ * 
+ * 
  * Daten richtig einbinden
+ * 
  * Zeitfilter: Area animation/transition
+ * 
  * Tooltip: Kreis & Text
  */
 
@@ -19,10 +26,10 @@ async function drawAreaChart(url, xA, yA) {
   const yAccessor = yA;
   const xAccessor = xA;
 
-  let anzahl = dataset.length-1;
+  let anzahl = dataset.length - 1;
+  // console.log(anzahl);  
 
   let test = d3.select('#selectButton').property('value');
-  
 
   let startDate = dateParser(dataset[dataset.length - test].datum);
   let endDate = dateParser(dataset[dataset.length - 1].datum);
@@ -45,7 +52,7 @@ async function drawAreaChart(url, xA, yA) {
       top: 15,
       right: 40,
       bottom: 60,
-      left: 40
+      left: 120
     },
   };
   //calculate bounded width and height
@@ -108,9 +115,8 @@ async function drawAreaChart(url, xA, yA) {
     .call(xAxisGenerator)//führt generator methode aus
     .style('transform', `translateY(${dimensions.boundH}px)`);
 
-
-
   //Interactions
+
   /*-------------------------------------------------------------*/
   //Change xAxis
   function updateX() {
@@ -118,7 +124,7 @@ async function drawAreaChart(url, xA, yA) {
     test = d3.select('#selectButton').property('value');
 
     if (d3.select("#selectButton").property("value") == "1") {
-      test = anzahl; 
+      test = anzahl;
     }
 
     startDate = dateParser(dataset[dataset.length - test].datum);
@@ -145,7 +151,7 @@ async function drawAreaChart(url, xA, yA) {
 
     yAxis = bounds.append('g')
       .attr("class", "grid")
-      .call(yAxisGenerator); //führt generator methode aus
+      .call(yAxisGenerator);//führt generator methode aus
 
 
     xAxisGenerator.ticks(2);
@@ -155,14 +161,14 @@ async function drawAreaChart(url, xA, yA) {
 
     xAxis.transition().duration(1000).call(xAxisGenerator);
     yAxis.transition().duration(1000).call(yAxisGenerator);
-    area.transition().duration(1000);
+    area.transition().duration(1000).call(areaGenerator);
 
   }
 
   d3.select('#selectButton').on('change', updateX);
   /*-------------------------------------------------------------*/
   /*-------------------------------------------------------------*/
-  //Tooltip  
+  //Hovern  
   // const tooltip = d3.select("#tooltip")
 
   // d3.select("#wrapper")
@@ -180,41 +186,41 @@ async function drawAreaChart(url, xA, yA) {
   // d3.select("#wrapper").call(hover);
 
   // function hover() {
-  // 	var bisect = d3.bisector(d => d.datum).left,
-  // 		format = d3.format("+20"),
-  // 		dateFormat = d3.timeFormat("%d %B")
+  //  var bisect = d3.bisector(d => d.datum).left,
+  //    format = d3.format("+20"),
+  //    dateFormat = d3.timeFormat("%d %B")
 
-  // 	var focus = bounds.append("g")
-  // 		.style("display", "none");
+  //  var focus = bounds.append("g")
+  //    .style("display", "none");
 
-  // 	focus.append("line") //linie definieren
-  // 		.attr("stroke", "#666")
-  // 		.attr("stroke-width", 1)
-  // 		.attr("y1", -dimensions.boundH) //obere grenze
-  // 		.attr("y2", -0); //untere grenze
+  //  focus.append("line") //linie definieren
+  //    .attr("stroke", "#666")
+  //    .attr("stroke-width", 1)
+  //    .attr("y1", -dimensions.boundH) //obere grenze
+  //    .attr("y2", -0); //untere grenze
 
   //   focus.append("circle")
-  // 		.attr("class", "circle")
-  // 		.attr("r", 5)
-  // 		.attr("dy", 5)
-  // 		.attr("stroke", "steelblue")
-  // 		.attr("fill", "#fff");
+  //    .attr("class", "circle")
+  //    .attr("r", 5)
+  //    .attr("dy", 5)
+  //    .attr("stroke", "steelblue")
+  //    .attr("fill", "#fff");
 
   //   focus.append("text") //text dfinieren
   //     .attr("fill", "#666")
-  // 		.attr("text-anchor", "middle")
+  //    .attr("text-anchor", "middle")
 
-  // 	var overlay = bounds.append("rect") //wo hovern funktioniert
-  // 		.attr("class", "overlay")
-  // 		.attr("x", 0)
-  // 		.attr("y", 0)
-  // 		.attr("width", dimensions.boundW)
+  //  var overlay = bounds.append("rect") //wo hovern funktioniert
+  //    .attr("class", "overlay")
+  //    .attr("x", 0)
+  //    .attr("y", 0)
+  //    .attr("width", dimensions.boundW)
   //     .attr("height", dimensions.boundH)
-  // 		.on("mouseover", () => focus.style("display", null))
-  // 		.on("mouseout", () => focus.style("display", "none"))
-  // 		.on("mousemove", mousemove);
+  //    .on("mouseover", () => focus.style("display", null))
+  //    .on("mouseout", () => focus.style("display", "none"))
+  //    .on("mousemove", mousemove);
 
-  // 	function mousemove() { //was beim hovern angezeigt wird 
+  //  function mousemove() { //was beim hovern angezeigt wird 
 
   //     var xM = d3.mouse(this)[0];
   //     var yM = d3.mouse(this)[1];
@@ -227,11 +233,12 @@ async function drawAreaChart(url, xA, yA) {
   //     focus.attr("transform", `translate(${xM},${yScale(d.taeglicheErkrankungen)})`); 
 
   //     console.log(yScale(d.taeglicheErkrankungen));
-  // 	}
+  //  }
   // }
   /*-------------------------------------------------------------*/
 
 }
+
 
 
 
