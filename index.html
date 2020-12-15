@@ -4,7 +4,7 @@
         <title>Areachart</title>
         <link rel="stylesheet" href="./style.css">
         <script src="./d3.v5.js"></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.min.js'></script>
+        <!-- <script src="https://d3js.org/d3.v6.min.js"></script> -->
         
     </head>
     <body>
@@ -12,14 +12,19 @@
         <div class="container">
             <h2>Areachart</h2>
         </div>
+        <select id="selectButton">
+            <option class="zW" value="15">2 Wochen</option>
+            <option class="eM" value="31">1 Monat</option>
+            <option class="dM" value="61">3 Monate</option>
+            <option class="sB" value="1">seit Beginn</option>
+        </select>
         <div id="wrapper"></div>
 
 
 
 
-        <!-- <script src="./loadData.js"></script> -->
-        <script src="./DashboardData.js"></script>
-        <script src="./chart.js"></script>
         
+        <script src="./chart.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.min.js'></script>
     </body>
 </html>
