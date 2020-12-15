@@ -1,3 +1,11 @@
+/**
+ * to-do: 
+ * Breite verstehen? 
+ * Daten richtig einbinden
+ * Zeitfilter: Area animation/transition
+ * Tooltip: Kreis & Text
+ */
+
 const dateParser = d3.timeParse('%d.%m.%Y');
 //var bisectDate = d3.bisector(function(d) { return d.datum; }).left; 
 drawAreaChart('./Epi.json', d => dateParser(d.datum), d => d.taeglicheErkrankungen);
@@ -12,14 +20,9 @@ async function drawAreaChart(url, xA, yA) {
   const xAccessor = xA;
 
   let anzahl = dataset.length-1;
-  //console.log(anzahl);  
 
   let test = d3.select('#selectButton').property('value');
   
-  // if (d3.select("#selectButton").property("value") == "1") {
-  //   test = anzahl; 
-  //   console.log(test); 
-  // }
 
   let startDate = dateParser(dataset[dataset.length - test].datum);
   let endDate = dateParser(dataset[dataset.length - 1].datum);
@@ -76,7 +79,6 @@ async function drawAreaChart(url, xA, yA) {
     .y0(dimensions.boundH)
     .y1(d => yScale(yAccessor(d)));
 
-
   let area = bounds
     .append('path')
     .attr('d', areaGenerator(dataset))
@@ -89,7 +91,6 @@ async function drawAreaChart(url, xA, yA) {
 
   yAxisGenerator.ticks(4);
   yAxisGenerator.tickSize(-dimensions.boundW); //weißes 'grid'
-  //yAxisGenerator.tickValues([startValue, endValue]);
 
   let yAxis = bounds.append('g')
     .attr("class", "grid")
@@ -102,16 +103,14 @@ async function drawAreaChart(url, xA, yA) {
   xAxisGenerator.tickValues([startDate, endDate]);
   xAxisGenerator.tickFormat(d3.timeFormat("%d.%m.%Y"));
 
-  // yAxisGenerator.ticks(8);
-  // yAxisGenerator.tickValues([0,endValue+100]);
-
   let xAxis = bounds.append('g')
     .attr("class", "grid")
     .call(xAxisGenerator)//führt generator methode aus
     .style('transform', `translateY(${dimensions.boundH}px)`);
 
-  //Interactions
 
+
+  //Interactions
   /*-------------------------------------------------------------*/
   //Change xAxis
   function updateX() {
@@ -143,11 +142,10 @@ async function drawAreaChart(url, xA, yA) {
 
     yAxisGenerator.ticks(4);
     yAxisGenerator.tickSize(-dimensions.boundW); //weißes 'grid'
-    //yAxisGenerator.tickValues([startValue, endValue]);
 
     yAxis = bounds.append('g')
       .attr("class", "grid")
-      .call(yAxisGenerator);//führt generator methode aus
+      .call(yAxisGenerator); //führt generator methode aus
 
 
     xAxisGenerator.ticks(2);
