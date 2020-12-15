@@ -1,0 +1,28 @@
+body {
+    font-family: Inter;
+    fill: black;
+    
+}
+
+.smallLabel{
+    font-size: 15px;
+}
+
+
+.bigLabel{
+    font-size: 1.3em;
+}
+
+.anfangstext{
+    font-size: 15px;
+}
+
+
+.rectLinks{
+    fill: #34367d;
+}
+
+.rectRechts{
+    fill: #f4f3ff;
+
+}
