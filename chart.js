@@ -12,7 +12,7 @@ async function drawAreaChart(url, xA, yA) {
   const xAccessor = xA;
 
   let anzahl = dataset.length-1;
-  // console.log(anzahl);  
+  //console.log(anzahl);  
 
   let test = d3.select('#selectButton').property('value');
   
