@@ -41,8 +41,8 @@ async function drawAreaChart(url, xA, yA) {
   //console.log(startDate); 
   //console.log(endDate);
   //console.log(startValue); 
-  // console.log(dataset.length); 
-  // console.table(dataset);
+  //console.log(dataset.length); 
+  //console.table(dataset);
 
 
   //2 - set dimension and properties
