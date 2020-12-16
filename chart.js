@@ -11,6 +11,7 @@
  * Zeitfilter: Area animation/transition
  * 
  * Tooltip: Kreis & Text
+ * -> Warum kann ich nicht auf die Accessoren zugreifen? 
  */
 
 const dateParser = d3.timeParse('%d.%m.%Y');
@@ -163,78 +164,80 @@ async function drawAreaChart(url, xA, yA) {
     yAxis.transition().duration(1000).call(yAxisGenerator);
     area.transition().duration(1000).call(areaGenerator);
 
+    d3.select("#wrapper").call(hover);
+
   }
 
   d3.select('#selectButton').on('change', updateX);
   /*-------------------------------------------------------------*/
   /*-------------------------------------------------------------*/
-  //Hovern  
-  // const tooltip = d3.select("#tooltip")
+  // Hovern  
+  const tooltip = d3.select("#tooltip")
 
-  // d3.select("#wrapper")
-  //   .on("mouseover", onMouseEnter)
-  //   .on("mouseleave", onMouseLeave);
+  d3.select("#wrapper")
+    .on("mouseover", onMouseEnter)
+    .on("mouseleave", onMouseLeave);
 
-  // function onMouseEnter() {
+  function onMouseEnter() {
 
-  //   tooltip.style("opacity", 1)
-  // }
-  // function onMouseLeave() {
-  //   console.log("2");
-  // }
+    tooltip.style("opacity", 1)
+  }
+  function onMouseLeave() {
+    console.log("2");
+  }
 
-  // d3.select("#wrapper").call(hover);
+  d3.select("#wrapper").call(hover);
 
-  // function hover() {
-  //  var bisect = d3.bisector(d => d.datum).left,
-  //    format = d3.format("+20"),
-  //    dateFormat = d3.timeFormat("%d %B")
+  function hover() {
+   var bisect = d3.bisector(d => d.datum).left,
+     format = d3.format("+20"),
+     dateFormat = d3.timeFormat("%d %B")
 
-  //  var focus = bounds.append("g")
-  //    .style("display", "none");
+   var focus = bounds.append("g")
+     .style("display", "none");
 
-  //  focus.append("line") //linie definieren
-  //    .attr("stroke", "#666")
-  //    .attr("stroke-width", 1)
-  //    .attr("y1", -dimensions.boundH) //obere grenze
-  //    .attr("y2", -0); //untere grenze
+   focus.append("line") //linie definieren
+     .attr("stroke", "#666")
+     .attr("stroke-width", 1)
+     .attr("y1", -dimensions.boundH) //obere grenze
+     .attr("y2", -0); //untere grenze
 
-  //   focus.append("circle")
-  //    .attr("class", "circle")
-  //    .attr("r", 5)
-  //    .attr("dy", 5)
-  //    .attr("stroke", "steelblue")
-  //    .attr("fill", "#fff");
+    focus.append("circle")
+     .attr("class", "circle")
+     .attr("r", 5)
+     .attr("dy", 5)
+     .attr("stroke", "steelblue")
+     .attr("fill", "#fff");
 
-  //   focus.append("text") //text dfinieren
-  //     .attr("fill", "#666")
-  //    .attr("text-anchor", "middle")
+    focus.append("text") //text dfinieren
+      .attr("fill", "#666")
+     .attr("text-anchor", "middle")
 
-  //  var overlay = bounds.append("rect") //wo hovern funktioniert
-  //    .attr("class", "overlay")
-  //    .attr("x", 0)
-  //    .attr("y", 0)
-  //    .attr("width", dimensions.boundW)
-  //     .attr("height", dimensions.boundH)
-  //    .on("mouseover", () => focus.style("display", null))
-  //    .on("mouseout", () => focus.style("display", "none"))
-  //    .on("mousemove", mousemove);
+   var overlay = bounds.append("rect") //wo hovern funktioniert
+     .attr("class", "overlay")
+     .attr("x", 0)
+     .attr("y", 0)
+     .attr("width", dimensions.boundW)
+      .attr("height", dimensions.boundH)
+     .on("mouseover", () => focus.style("display", null))
+     .on("mouseout", () => focus.style("display", "none"))
+     .on("mousemove", mousemove);
 
-  //  function mousemove() { //was beim hovern angezeigt wird 
+   function mousemove() { //was beim hovern angezeigt wird 
 
-  //     var xM = d3.mouse(this)[0];
-  //     var yM = d3.mouse(this)[1];
+      var xM = d3.mouse(this)[0];
+      var yM = d3.mouse(this)[1];
 
-  //     var x0 = xScale.invert(xM),
-  //         i = (dataset, x0, 1),
-  //         d0 = dataset[i - 1],
-  //         d1 = dataset[i],
-  //         d = x0 - d0.datum > d1.datum - x0 ? d1 : d0;
-  //     focus.attr("transform", `translate(${xM},${yScale(d.taeglicheErkrankungen)})`); 
+      var x0 = xScale.invert(xM),
+          i = (dataset, x0, 1),
+          d0 = dataset[i - 1],
+          d1 = dataset[i],
+          d = x0 - d0.datum > d1.datum - x0 ? d1 : d0;
+      focus.attr("transform", `translate(${xM},${yScale(d.taeglicheErkrankungen)})`); 
 
-  //     console.log(yScale(d.taeglicheErkrankungen));
-  //  }
-  // }
+      console.log(yScale(d.taeglicheErkrankungen));
+   }
+  }
   /*-------------------------------------------------------------*/
 
 }

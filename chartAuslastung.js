@@ -83,6 +83,14 @@ async function drawLineChart(){
         .attr("width", FZHospPercent)
         .attr("height", barHeight);
         //.attr("fill", "#34367d");
+
+    // var pathTest1 = wrapper.selectAll("FZHosp")
+    //     .data(dataset)
+    //     .enter()
+    //     .append("path")
+    //     .attr("class", "rectLinks")
+    //     .attr('d', `M0,0 h35 q${dimensions.margin.top + abstandErsterText},0 ${dimensions.margin.top + abstandErsterText},5 v${barHeight} q0,${dimensions.margin.top + abstandErsterText} -5,${dimensions.margin.top + abstandErsterText} h-${FZHospPercent} z` ); 
+    //     //.attr("fill", "#34367d");
     
     var barFZHospFree = wrapper.selectAll("FZHospFree")
         .data(dataset)
