@@ -47,27 +47,28 @@ async function drawAreaChart(url, xA, yA) {
 
   //2 - set dimension and properties
   let dimensions = {
-    width: window.innerWidth * 0.8,
-    height: window.innerWidth * 0.5,
-    margin: {
+    width: window.innerWidth,
+    height: window.innerWidth * 0.7,
+    padding: {
       top: 15,
-      right: 40,
+      right: 20,
       bottom: 60,
-      left: 120
+      left: 47
     },
   };
   //calculate bounded width and height
-  dimensions.boundW = dimensions.width - dimensions.margin.left - dimensions.margin.right;
-  dimensions.boundH = dimensions.height - dimensions.margin.top - dimensions.margin.bottom;
+  dimensions.boundW = dimensions.width - dimensions.padding.left - dimensions.padding.right;
+  dimensions.boundH = dimensions.height - dimensions.padding.top - dimensions.padding.bottom;
 
   //3 - draw canvas
   const wrapper = d3.select('#wrapper');
   let svg = wrapper.append('svg')
     .attr('width', dimensions.width)
-    .attr('height', dimensions.height);
+    .attr('height', dimensions.height)
+    .attr('overflow', 'hidden');
 
   let bounds = svg.append('g')
-    .style('transform', `translate(${dimensions.margin.left}px,${dimensions.margin.top}px)`);
+    .style('transform', `translate(${dimensions.padding.left}px,${dimensions.padding.top}px)`);
 
 
   //create scales
@@ -89,9 +90,12 @@ async function drawAreaChart(url, xA, yA) {
 
   let area = bounds
     .append('path')
+    .attr("class", "test")
     .attr('d', areaGenerator(dataset))
     .attr('fill', '#968AB6')
     .attr('stroke', '#968AB6');
+
+  console.log(area); 
 
   //draw peripherals
   let yAxisGenerator = d3.axisLeft()
@@ -102,14 +106,15 @@ async function drawAreaChart(url, xA, yA) {
 
   let yAxis = bounds.append('g')
     .attr("class", "grid")
-    .call(yAxisGenerator);//führt generator methode aus
+    .call(yAxisGenerator); //führt generator methode aus
+    // .style('transform', `translateX(-${dimensions.padding.left}px)`); 
 
   let xAxisGenerator = d3.axisBottom()
     .scale(xScale);
 
-  xAxisGenerator.ticks(2);
+  //xAxisGenerator.ticks(3);
   xAxisGenerator.tickValues([startDate, endDate]);
-  xAxisGenerator.tickFormat(d3.timeFormat("%d.%m.%Y"));
+  xAxisGenerator.tickFormat(d3.timeFormat("%d.%m"));
 
   let xAxis = bounds.append('g')
     .attr("class", "grid")
@@ -157,7 +162,7 @@ async function drawAreaChart(url, xA, yA) {
 
     xAxisGenerator.ticks(2);
     xAxisGenerator.tickValues([startDate, endDate]);
-    xAxisGenerator.tickFormat(d3.timeFormat("%d.%m.%Y"));
+    xAxisGenerator.tickFormat(d3.timeFormat("%d.%m"));
 
 
     xAxis.transition().duration(1000).call(xAxisGenerator);
@@ -211,14 +216,14 @@ async function drawAreaChart(url, xA, yA) {
 
     focus.append("text") //text dfinieren
       .attr("fill", "#666")
-     .attr("text-anchor", "middle")
+      .attr("text-anchor", "middle")
 
    var overlay = bounds.append("rect") //wo hovern funktioniert
      .attr("class", "overlay")
      .attr("x", 0)
      .attr("y", 0)
      .attr("width", dimensions.boundW)
-      .attr("height", dimensions.boundH)
+     .attr("height", dimensions.boundH)
      .on("mouseover", () => focus.style("display", null))
      .on("mouseout", () => focus.style("display", "none"))
      .on("mousemove", mousemove);

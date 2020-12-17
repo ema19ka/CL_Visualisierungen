@@ -121,7 +121,7 @@ async function drawLineChart() {
         .enter()
         .append("path")
         .attr("class", "rectLinks")
-        .attr('d', leftRoundedRect(0, dimensions.margin.top + abstandErsterText, 120/*FZHospPercent*/, barHeight, 10));
+        .attr('d', leftRoundedRect(0, dimensions.margin.top + abstandErsterText, 120, barHeight, 10));
     //.attr("fill", "#34367d");
 
 
@@ -175,15 +175,15 @@ async function drawLineChart() {
     //     .attr("width", 13)
     //     .attr("height", barHeight);
 
-    var HelpRectBarFZHospFree = wrapper.selectAll("FZHospFree")
-        .data(dataset)
-        .enter()
-        .append("rect")
-        .attr("class", "rectRechts")
-        .attr("x", FZHospPercent)
-        .attr("y", dimensions.margin.top + abstandErsterText)
-        .attr("width", 13)
-        .attr("height", barHeight);
+    // var HelpRectBarFZHospFree = wrapper.selectAll("FZHospFree")
+    //     .data(dataset)
+    //     .enter()
+    //     .append("rect")
+    //     .attr("class", "rectRechts")
+    //     .attr("x", FZHospPercent)
+    //     .attr("y", dimensions.margin.top + abstandErsterText)
+    //     .attr("width", 13)
+    //     .attr("height", barHeight);
 
     var HelpRectBarFZICU = wrapper.selectAll("FZICU")
         .data(dataset)
