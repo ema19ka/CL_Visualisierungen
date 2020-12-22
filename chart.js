@@ -55,9 +55,9 @@ async function drawAreaChart(url, xA, yA) {
     width: window.innerWidth * 0.9,
     height: window.innerWidth * 0.5,
     margin: {
-      top: 15,
-      right: 40,
-      bottom: 60,
+      top: 0,
+      right: 47,
+      bottom: 25,
       left: 47
     },
   };
@@ -69,10 +69,11 @@ async function drawAreaChart(url, xA, yA) {
   const wrapper = d3.select('#wrapper');
   let svg = wrapper.append('svg')
     .attr('width', dimensions.width)
-    .attr('height', dimensions.height);
-
-  let bounds = svg.append('g')
+    .attr('height', dimensions.height)
     .style('transform', `translate(${dimensions.margin.left}px,${dimensions.margin.top}px)`);
+
+  let bounds = svg.append('g');
+    // .style('transform', `translate(${dimensions.margin.left}px,${dimensions.margin.top}px)`);
 
 
   //create scales
@@ -119,7 +120,7 @@ async function drawAreaChart(url, xA, yA) {
 
   xAxisGenerator.ticks(2);
   xAxisGenerator.tickValues([startDate, endDate]);
-  xAxisGenerator.tickFormat(d3.timeFormat("%d.%m.%Y"));
+  xAxisGenerator.tickFormat(d3.timeFormat("%d.%m"));
 
   // yAxisGenerator.ticks(8);
   // yAxisGenerator.tickValues([0,endValue+100]);
@@ -171,12 +172,14 @@ async function drawAreaChart(url, xA, yA) {
 
     xAxisGenerator.ticks(2);
     xAxisGenerator.tickValues([startDate, endDate]);
-    xAxisGenerator.tickFormat(d3.timeFormat("%d.%m.%Y"));
+    xAxisGenerator.tickFormat(d3.timeFormat("%d.%m"));
 
 
     xAxis.transition().duration(1000).call(xAxisGenerator);
     yAxis.transition().duration(1000).call(yAxisGenerator);
     area.transition().duration(1000).call(areaGenerator);
+
+    d3.select("#wrapper").call(hover);
 
   }
 
@@ -196,7 +199,7 @@ async function drawAreaChart(url, xA, yA) {
     tooltip.style("opacity", 1)
   }
   function onMouseLeave() {
-    console.log("2");
+    //console.log("2");
   }
 
   d3.select("#wrapper").call(hover);
@@ -210,7 +213,7 @@ async function drawAreaChart(url, xA, yA) {
       .style("display", "none");
 
     focus.append("line") //linie definieren
-      .attr("stroke", "#666")
+      .attr("stroke", "#211F77")
       .attr("stroke-width", 1)
       .attr("y1", -dimensions.boundH) //obere grenze
       .attr("y2", -0); //untere grenze
@@ -219,8 +222,8 @@ async function drawAreaChart(url, xA, yA) {
       .attr("class", "circle")
       .attr("r", 5)
       .attr("dy", 5)
-      .attr("stroke", "steelblue")
-      .attr("fill", "#fff");
+      .attr("stroke", "#211F77")
+      .attr("fill", "#211F77");
 
     focus.append("text") //text dfinieren
       .attr("fill", "#666")
@@ -248,7 +251,7 @@ async function drawAreaChart(url, xA, yA) {
         d = x0 - d0.datum > d1.datum - x0 ? d1 : d0;
       focus.attr("transform", `translate(${xM},${yScale(d.taeglicheErkrankungen)})`);
 
-      console.log(yScale(d.taeglicheErkrankungen));
+      //console.log(yScale(d.taeglicheErkrankungen));
     }
   }
   /*-------------------------------------------------------------*/
