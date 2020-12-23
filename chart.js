@@ -72,8 +72,8 @@ async function drawAreaChart(url, xA, yA) {
     .attr('height', dimensions.height)
     .style('transform', `translate(${dimensions.margin.left}px,${dimensions.margin.top}px)`);
 
-  let bounds = svg.append('g');
-    // .style('transform', `translate(${dimensions.margin.left}px,${dimensions.margin.top}px)`);
+  let bounds = svg.append('g')
+     .style('transform', `translate(${dimensions.margin.left}px,${dimensions.margin.top}px)`);
 
 
   //create scales
@@ -113,7 +113,8 @@ async function drawAreaChart(url, xA, yA) {
 
   let yAxis = bounds.append('g')
     .attr("class", "grid")
-    .call(yAxisGenerator);//führt generator methode aus
+    .call(yAxisGenerator); 
+    // .style('transform', `translateX(-7px)`);//führt generator methode aus
 
   let xAxisGenerator = d3.axisBottom()
     .scale(xScale);
@@ -145,11 +146,6 @@ async function drawAreaChart(url, xA, yA) {
     startDate = dateParser(dataset[dataset.length - test].datum);
     endDate = dateParser(dataset[dataset.length - 1].datum);
 
-    // console.log(startDate); 
-    // startValue = 0;
-    // endValue = d3.max(dataset[startDate,endDate],yAccessor); 
-
-    //yScale.domain(d3.extent(dataset, yAccessor))
 
     xScale.domain([startDate, endDate]);
 
