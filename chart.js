@@ -20,6 +20,7 @@ drawAreaChart('./Epi.json', d => dateParser(d.datum), d => d.taeglicheErkrankung
 
 //Areachart
 async function drawAreaChart(url, xA, yA) {
+  d3.select('#selectButton').on('change', updateX);
 
   //1 - access data
   let dataset = await d3.json(url);
@@ -56,7 +57,7 @@ async function drawAreaChart(url, xA, yA) {
     height: window.innerWidth * 0.5,
     margin: {
       top: 0,
-      right: 47,
+      right: 70,
       bottom: 25,
       left: 47
     },
@@ -67,13 +68,14 @@ async function drawAreaChart(url, xA, yA) {
 
   //3 - draw canvas
   const wrapper = d3.select('#wrapper');
+
   let svg = wrapper.append('svg')
     .attr('width', dimensions.width)
     .attr('height', dimensions.height)
     .style('transform', `translate(${dimensions.margin.left}px,${dimensions.margin.top}px)`);
 
   let bounds = svg.append('g')
-     .style('transform', `translate(${dimensions.margin.left}px,${dimensions.margin.top}px)`);
+    .style('transform', `translate(${dimensions.margin.left}px,${dimensions.margin.top}px)`);
 
 
   //create scales
@@ -82,7 +84,7 @@ async function drawAreaChart(url, xA, yA) {
     .domain(d3.extent(dataset, yAccessor))
     .range([dimensions.boundH, 0]);
 
-   console.log(startDate); 
+  console.log(startDate);
 
   let xScale = d3.scaleTime()
     .domain([startDate, endDate])
@@ -97,11 +99,22 @@ async function drawAreaChart(url, xA, yA) {
 
 
   let area = bounds
-    // .enter()
+    .append('defs')
+    .append('clipPath')
+    .attr('id', 'area-clip')
     .append('path')
-    .attr('d', areaGenerator(dataset))
-    .attr('fill', '#968AB6')
-    .attr('stroke', '#968AB6');
+    .attr('d', areaGenerator(dataset));
+
+  bounds.append("rect")        // attach a rectangle
+    .attr("x", 0)        // position the left of the rectangle
+    .attr("y", 0)         // position the top of the rectangle
+    .attr("clip-path", "url(#area-clip)") // clip the rectangle
+    .style("fill", "#968AB6")   // fill the clipped path with grey
+    .attr("height", dimensions.boundH)    // set the height
+    .attr("width", dimensions.boundW);    // set the width
+
+
+
 
   //draw peripherals
   let yAxisGenerator = d3.axisLeft()
@@ -113,8 +126,8 @@ async function drawAreaChart(url, xA, yA) {
 
   let yAxis = bounds.append('g')
     .attr("class", "grid")
-    .call(yAxisGenerator); 
-    // .style('transform', `translateX(-7px)`);//führt generator methode aus
+    .call(yAxisGenerator);
+  // .style('transform', `translateX(-7px)`);//führt generator methode aus
 
   let xAxisGenerator = d3.axisBottom()
     .scale(xScale);
@@ -150,7 +163,7 @@ async function drawAreaChart(url, xA, yA) {
     xScale.domain([startDate, endDate]);
 
 
-    area = bounds
+    area = bounds     
       .append('path')
       .attr('d', areaGenerator(dataset))
       .attr('fill', '#968AB6')
@@ -180,7 +193,7 @@ async function drawAreaChart(url, xA, yA) {
   }
 
 
-  d3.select('#selectButton').on('change', updateX);
+  
   /*-------------------------------------------------------------*/
   /*-------------------------------------------------------------*/
   // Hovern  
