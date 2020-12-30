@@ -20,7 +20,6 @@ drawAreaChart('./Epi.json', d => dateParser(d.datum), d => d.taeglicheErkrankung
 
 //Areachart
 async function drawAreaChart(url, xA, yA) {
-  d3.select('#selectButton').on('change', updateX);
 
   //1 - access data
   let dataset = await d3.json(url);
@@ -31,14 +30,14 @@ async function drawAreaChart(url, xA, yA) {
   let anzahl = dataset.length - 1;
   // console.log(anzahl);  
 
-  let test = d3.select('#selectButton').property('value');
+  let val = d3.select('#selectButton').property('value');
 
   // if (d3.select("#selectButton").property("value") == "1") {
   //   test = anzahl; 
   //   console.log(test); 
   // }
 
-  let startDate = dateParser(dataset[dataset.length - test].datum);
+  let startDate = dateParser(dataset[dataset.length - val].datum);
   let endDate = dateParser(dataset[dataset.length - 1].datum);
 
   let startValue = 0;
@@ -104,18 +103,71 @@ async function drawAreaChart(url, xA, yA) {
     .attr('id', 'area-clip')
     .append('path')
     .attr('d', areaGenerator(dataset));
+   
 
-  bounds.append("rect")        // attach a rectangle
-    .attr("x", 0)        // position the left of the rectangle
-    .attr("y", 0)         // position the top of the rectangle
+  let test = bounds.append("rect")        // attach a rectangle
+    .attr("x", 20)        // position the left of the rectangle
+    .attr("y", 20)         // position the top of the rectangle
     .attr("clip-path", "url(#area-clip)") // clip the rectangle
     .style("fill", "#968AB6")   // fill the clipped path with grey
-    .attr("height", dimensions.boundH)    // set the height
-    .attr("width", dimensions.boundW);    // set the width
+    .attr("height", 100)    // set the height
+    .attr("width", 100);    // set the width
 
 
+  //Interactions
+
+  /*-------------------------------------------------------------*/
+  //Change xAxis
+  function updateX() {
+    area.remove();
+    
+    val = d3.select('#selectButton').property('value');
+
+    if (d3.select("#selectButton").property("value") == "1") {
+      val = anzahl;
+    }
+
+    startDate = dateParser(dataset[dataset.length - val].datum);
+    endDate = dateParser(dataset[dataset.length - 1].datum);
 
 
+    xScale.domain([startDate, endDate]);
+  
+
+    area = bounds
+    // .append('defs')
+    // .append('clipPath')
+    // .attr('id', 'area-clip')
+    .append('path')
+    .attr('d', areaGenerator(dataset));
+
+    yAxisGenerator.ticks(4);
+    yAxisGenerator.tickSize(-dimensions.boundW); //weißes 'grid'
+    //yAxisGenerator.tickValues([startValue, endValue]);
+
+    yAxis = bounds.append('g')
+      .attr("class", "grid")
+      .call(yAxisGenerator);//führt generator methode aus
+
+
+    xAxisGenerator.ticks(2);
+    xAxisGenerator.tickValues([startDate, endDate]);
+    xAxisGenerator.tickFormat(d3.timeFormat("%d.%m"));
+
+
+    xAxis.transition().duration(1000).call(xAxisGenerator);
+    yAxis.transition().duration(1000).call(yAxisGenerator);
+    area.transition().duration(1000).call(areaGenerator);
+
+    // d3.select("#wrapper").call(hover);
+    
+
+  }
+
+
+  d3.select('#selectButton').on('change', updateX);
+
+  
   //draw peripherals
   let yAxisGenerator = d3.axisLeft()
     .scale(yScale);
@@ -143,129 +195,79 @@ async function drawAreaChart(url, xA, yA) {
     .attr("class", "grid")
     .call(xAxisGenerator)//führt generator methode aus
     .style('transform', `translateY(${dimensions.boundH}px)`);
-
-  //Interactions
-
-  /*-------------------------------------------------------------*/
-  //Change xAxis
-  function updateX() {
-    area.remove();
-    test = d3.select('#selectButton').property('value');
-
-    if (d3.select("#selectButton").property("value") == "1") {
-      test = anzahl;
-    }
-
-    startDate = dateParser(dataset[dataset.length - test].datum);
-    endDate = dateParser(dataset[dataset.length - 1].datum);
-
-
-    xScale.domain([startDate, endDate]);
-
-
-    area = bounds     
-      .append('path')
-      .attr('d', areaGenerator(dataset))
-      .attr('fill', '#968AB6')
-      .attr('stroke', '#968AB6');
-
-
-    yAxisGenerator.ticks(4);
-    yAxisGenerator.tickSize(-dimensions.boundW); //weißes 'grid'
-    //yAxisGenerator.tickValues([startValue, endValue]);
-
-    yAxis = bounds.append('g')
-      .attr("class", "grid")
-      .call(yAxisGenerator);//führt generator methode aus
-
-
-    xAxisGenerator.ticks(2);
-    xAxisGenerator.tickValues([startDate, endDate]);
-    xAxisGenerator.tickFormat(d3.timeFormat("%d.%m"));
-
-
-    xAxis.transition().duration(1000).call(xAxisGenerator);
-    yAxis.transition().duration(1000).call(yAxisGenerator);
-    area.transition().duration(1000).call(areaGenerator);
-
-    d3.select("#wrapper").call(hover);
-
-  }
-
-
-  
   /*-------------------------------------------------------------*/
   /*-------------------------------------------------------------*/
   // Hovern  
-  const tooltip = d3.select("#tooltip")
+  // const tooltip = d3.select("#tooltip")
 
-  d3.select("#wrapper")
-    .on("mouseover", onMouseEnter)
-    .on("mouseleave", onMouseLeave);
+  // d3.select("#wrapper")
+  //   .on("mouseover", onMouseEnter)
+  //   .on("mouseleave", onMouseLeave);
 
-  function onMouseEnter() {
+  // function onMouseEnter() {
 
-    tooltip.style("opacity", 1)
-  }
-  function onMouseLeave() {
-    //console.log("2");
-  }
+  //   tooltip.style("opacity", 1)
+  // }
+  // function onMouseLeave() {
+  //   //console.log("2");
+  // }
 
-  d3.select("#wrapper").call(hover);
+  // d3.select("#wrapper").call(hover);
 
-  function hover() {
-    var bisect = d3.bisector(d => d.datum).left,
-      format = d3.format("+20"),
-      dateFormat = d3.timeFormat("%d %B")
+  // function hover() {
+  //   var bisect = d3.bisector(d => d.datum).left,
+  //     format = d3.format("+20"),
+  //     dateFormat = d3.timeFormat("%d %B")
 
-    var focus = bounds.append("g")
-      .style("display", "none");
+  //   var focus = bounds.append("g")
+  //     .style("display", "none");
 
-    focus.append("line") //linie definieren
-      .attr("stroke", "#211F77")
-      .attr("stroke-width", 1)
-      .attr("y1", -dimensions.boundH) //obere grenze
-      .attr("y2", -0); //untere grenze
+  //   focus.append("line") //linie definieren
+  //     .attr("stroke", "#211F77")
+  //     .attr("stroke-width", 1)
+  //     .attr("y1", -dimensions.boundH) //obere grenze
+  //     .attr("y2", -0); //untere grenze
 
-    focus.append("circle")
-      .attr("class", "circle")
-      .attr("r", 5)
-      .attr("dy", 5)
-      .attr("stroke", "#211F77")
-      .attr("fill", "#211F77");
+  //   focus.append("circle")
+  //     .attr("class", "circle")
+  //     .attr("r", 5)
+  //     .attr("dy", 5)
+  //     .attr("stroke", "#211F77")
+  //     .attr("fill", "#211F77");
 
-    focus.append("text") //text dfinieren
-      .attr("fill", "#666")
-      .attr("text-anchor", "middle")
+  //   focus.append("text") //text dfinieren
+  //     .attr("fill", "#666")
+  //     .attr("text-anchor", "middle")
 
-    var overlay = bounds.append("rect") //wo hovern funktioniert
-      .attr("class", "overlay")
-      .attr("x", 0)
-      .attr("y", 0)
-      .attr("width", dimensions.boundW)
-      .attr("height", dimensions.boundH)
-      .on("mouseover", () => focus.style("display", null))
-      .on("mouseout", () => focus.style("display", "none"))
-      .on("mousemove", mousemove);
+  //   var overlay = bounds.append("rect") //wo hovern funktioniert
+  //     .attr("class", "overlay")
+  //     .attr("x", 0)
+  //     .attr("y", 0)
+  //     .attr("width", dimensions.boundW)
+  //     .attr("height", dimensions.boundH)
+  //     .on("mouseover", () => focus.style("display", null))
+  //     .on("mouseout", () => focus.style("display", "none"))
+  //     .on("mousemove", mousemove);
 
-    function mousemove() { //was beim hovern angezeigt wird 
+  //   function mousemove() { //was beim hovern angezeigt wird 
 
-      var xM = d3.mouse(this)[0];
-      var yM = d3.mouse(this)[1];
+  //     var xM = d3.mouse(this)[0];
+  //     var yM = d3.mouse(this)[1];
 
-      var x0 = xScale.invert(xM),
-        i = (dataset, x0, 1),
-        d0 = dataset[i - 1],
-        d1 = dataset[i],
-        d = x0 - d0.datum > d1.datum - x0 ? d1 : d0;
-      focus.attr("transform", `translate(${xM},${yScale(d.taeglicheErkrankungen)})`);
+  //     var x0 = xScale.invert(xM),
+  //       i = (dataset, x0, 1),
+  //       d0 = dataset[i - 1],
+  //       d1 = dataset[i],
+  //       d = x0 - d0.datum > d1.datum - x0 ? d1 : d0;
+  //     focus.attr("transform", `translate(${xM},${yScale(d.taeglicheErkrankungen)})`);
 
-      //console.log(yScale(d.taeglicheErkrankungen));
-    }
-  }
+  //     //console.log(yScale(d.taeglicheErkrankungen));
+  //   }
+  // }
   /*-------------------------------------------------------------*/
 
 }
+
 
 
 
