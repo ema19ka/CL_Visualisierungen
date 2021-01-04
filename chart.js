@@ -30,7 +30,8 @@ async function drawAreaChart(url, xA, yA) {
   let anzahl = dataset.length - 1;
   // console.log(anzahl);  
 
-  let val = d3.select('#selectButton').property('value');
+  // let val = d3.select('#selectButton').property('value');
+  let val = 15; 
 
   // if (d3.select("#selectButton").property("value") == "1") {
   //   test = anzahl; 
@@ -106,12 +107,12 @@ async function drawAreaChart(url, xA, yA) {
    
 
   let test = bounds.append("rect")        // attach a rectangle
-    .attr("x", 20)        // position the left of the rectangle
-    .attr("y", 20)         // position the top of the rectangle
+    .attr("x", 0)        // position the left of the rectangle
+    .attr("y", 0)         // position the top of the rectangle
     .attr("clip-path", "url(#area-clip)") // clip the rectangle
     .style("fill", "#968AB6")   // fill the clipped path with grey
-    .attr("height", 100)    // set the height
-    .attr("width", 100);    // set the width
+    .attr("height", dimensions.boundH)    // set the height
+    .attr("width", dimensions.boundW);    // set the width
 
 
   //Interactions
