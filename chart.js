@@ -1,10 +1,7 @@
 /**
  * TO-DO:  
  * 
- * Breite verstehen? 
- * -> Path hat innerhalb eines g Elementes links einen Overflow, außer wenn man seit Beginn einstellt 
- * -> but why though?
- * 
+ * Breite: auch mit Zeitfilter? 
  * 
  * Daten richtig einbinden
  * 
@@ -16,16 +13,29 @@
 
 const dateParser = d3.timeParse('%d.%m.%Y');
 //var bisectDate = d3.bisector(function(d) { return d.datum; }).left; 
-drawAreaChart('./Epi.json', d => dateParser(d.datum), d => d.taeglicheErkrankungen);
+//drawAreaChart('./Epi.json', d => dateParser(d.datum), d => d.taeglicheErkrankungen);
+ //drawAreaChart('./test.json', d => dateParser(d.datum), d => d.AnzahlFaelle, 'Burgenland'); 
+
+drawAreaChart('./Epi.json', d => dateParser(d.datum), d => d.taeglicheErkrankungen, 'Burgenland'); 
 
 //Areachart
-async function drawAreaChart(url, xA, yA) {
+async function drawAreaChart(url, xA, yA, region) {
 
   //1 - access data
   let dataset = await d3.json(url);
 
   const yAccessor = yA;
   const xAccessor = xA;
+  const land = region; 
+
+  // nachLand = d3.group(dataset, region); 
+  // console.log(nachLand); 
+
+  let filtered = dataset.filter(function(d) { return d.Bundesland == land; });
+  console.table(dataset); 
+
+
+  // var allGroup = d3.map(data, function(d){return(xA)}).keys()
 
   let anzahl = dataset.length - 1;
   // console.log(anzahl);  
@@ -92,25 +102,28 @@ async function drawAreaChart(url, xA, yA) {
 
   // draw data (area)
   let areaGenerator = d3.area()
-    .curve(d3.curveBasis)
-    .x(d => xScale(xAccessor(d)))
-    .y0(dimensions.boundH)
-    .y1(d => yScale(yAccessor(d)));
+      .curve(d3.curveBasis)
+      .x(d => xScale(xAccessor(d)))
+      .y0(dimensions.boundH)
+      .y1(d => yScale(yAccessor(d)));
 
 
   let area = bounds
     .append('defs')
     .append('clipPath')
     .attr('id', 'area-clip')
-    .append('path')
+    .append('path') 
+    // .datum(dataset.filter(function(d){return d.Bundesland=="Österreich"}))
     .attr('d', areaGenerator(dataset));
+
+    // console.log(dataset.Bundesland[1]); 
    
 
   let test = bounds.append("rect")        // attach a rectangle
     .attr("x", 0)        // position the left of the rectangle
     .attr("y", 0)         // position the top of the rectangle
     .attr("clip-path", "url(#area-clip)") // clip the rectangle
-    .style("fill", "#968AB6")   // fill the clipped path with grey
+    .style("fill", "#968AB6")   // fill the clipped path with lila
     .attr("height", dimensions.boundH)    // set the height
     .attr("width", dimensions.boundW);    // set the width
 
