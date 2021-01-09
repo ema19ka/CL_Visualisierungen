@@ -1,72 +1,60 @@
-/**
- * TO-DO:  
- * 
- * Breite: auch mit Zeitfilter? 
- * 
- * Daten richtig einbinden
- * 
- * Zeitfilter: Area animation/transition
- * 
- * Tooltip: Kreis & Text
- * -> Warum kann ich nicht auf die Accessoren zugreifen? 
- */
-
 const dateParser = d3.timeParse('%d.%m.%Y');
 //var bisectDate = d3.bisector(function(d) { return d.datum; }).left; 
 //drawAreaChart('./Epi.json', d => dateParser(d.datum), d => d.taeglicheErkrankungen);
  //drawAreaChart('./test.json', d => dateParser(d.datum), d => d.AnzahlFaelle, 'Burgenland'); 
 
-drawAreaChart('./Epi.json', d => dateParser(d.datum), d => d.taeglicheErkrankungen, 'Burgenland'); 
+drawAreaChart(d => dateParser(d.datum), d => d.AnzahlFaelle, 'Kaernten', 500); 
 
 //Areachart
-async function drawAreaChart(url, xA, yA, region) {
+async function drawAreaChart(xA, yA, region, range) {
 
   //1 - access data
-  let dataset = await d3.json(url);
 
   const yAccessor = yA;
   const xAccessor = xA;
   const land = region; 
+  let filtered = dataOffline.filter(function(d) { return d.Bundesland == land; });
 
-  // nachLand = d3.group(dataset, region); 
-  // console.log(nachLand); 
+  
+//   console.table(filtered); 
+  // var allGroup = d3.map(data, functio n(d){return(xA)}).keys()
 
-  let filtered = dataset.filter(function(d) { return d.Bundesland == land; });
-  console.table(dataset); 
-
-
-  // var allGroup = d3.map(data, function(d){return(xA)}).keys()
-
-  let anzahl = dataset.length - 1;
-  // console.log(anzahl);  
+  let anzahl = filtered.length - 1;
+  console.log('Tage: ' + anzahl);  
 
   // let val = d3.select('#selectButton').property('value');
-  let val = 15; 
+  let val = 15; /*** Value vom Dropdown Zeitfilter */
 
   // if (d3.select("#selectButton").property("value") == "1") {
   //   test = anzahl; 
   //   console.log(test); 
   // }
 
-  let startDate = dateParser(dataset[dataset.length - val].datum);
-  let endDate = dateParser(dataset[dataset.length - 1].datum);
+  let startDate = dateParser(filtered[filtered.length - val].datum);
+  let endDate = dateParser(filtered[filtered.length - 1].datum);
 
-  let startValue = 0;
-  let endValue = dataset[100].taeglicheErkrankungen;
+  let startV = filtered[filtered.length - val].AnzahlFaelle;
+  let endV = filtered[filtered.length - 1].AnzahlFaelle;
 
-  //console.log(startDate); 
-  //console.log(endDate);
-  //console.log(startValue); 
-  // console.log(dataset.length); 
-  // console.table(dataset);
+  let eR = d3.max([filtered,yAccessor])
 
+  console.log('Start: ' + startDate); 
+  console.log('Ende: ' + endDate);
+
+  console.log('StartV: ' + startV); 
+  console.log('EndeV: ' + endV);
+
+  console.log('Max: ' + eR)
+
+  
+  
 
   //2 - set dimension and properties
   let dimensions = {
     width: window.innerWidth * 0.9,
     height: window.innerWidth * 0.5,
     margin: {
-      top: 0,
+      top: 30,
       right: 70,
       bottom: 25,
       left: 47
@@ -91,10 +79,9 @@ async function drawAreaChart(url, xA, yA, region) {
   //create scales
   let yScale = d3.scaleLinear()
     .nice()
-    .domain(d3.extent(dataset, yAccessor))
+    .domain([0, range]) /*abhängig von Daten machen */
     .range([dimensions.boundH, 0]);
 
-  console.log(startDate);
 
   let xScale = d3.scaleTime()
     .domain([startDate, endDate])
@@ -114,7 +101,7 @@ async function drawAreaChart(url, xA, yA, region) {
     .attr('id', 'area-clip')
     .append('path') 
     // .datum(dataset.filter(function(d){return d.Bundesland=="Österreich"}))
-    .attr('d', areaGenerator(dataset));
+    .attr('d', areaGenerator(filtered));
 
     // console.log(dataset.Bundesland[1]); 
    
@@ -132,54 +119,54 @@ async function drawAreaChart(url, xA, yA, region) {
 
   /*-------------------------------------------------------------*/
   //Change xAxis
-  function updateX() {
-    area.remove();
+//   function updateX() {
+//     area.remove();
     
-    val = d3.select('#selectButton').property('value');
+//     val = d3.select('#selectButton').property('value');
 
-    if (d3.select("#selectButton").property("value") == "1") {
-      val = anzahl;
-    }
+//     if (d3.select("#selectButton").property("value") == "1") {
+//       val = anzahl;
+//     }
 
-    startDate = dateParser(dataset[dataset.length - val].datum);
-    endDate = dateParser(dataset[dataset.length - 1].datum);
+//     startDate = dateParser(filtered[filtered.length - val].datum);
+//     endDate = dateParser(filtered[filtered.length - 1].datum);
 
 
-    xScale.domain([startDate, endDate]);
+//     xScale.domain([startDate, endDate]);
   
 
-    area = bounds
-    // .append('defs')
-    // .append('clipPath')
-    // .attr('id', 'area-clip')
-    .append('path')
-    .attr('d', areaGenerator(dataset));
+//     area = bounds
+//     // .append('defs')
+//     // .append('clipPath')
+//     // .attr('id', 'area-clip')
+//     .append('path')
+//     .attr('d', areaGenerator(filtered));
 
-    yAxisGenerator.ticks(4);
-    yAxisGenerator.tickSize(-dimensions.boundW); //weißes 'grid'
-    //yAxisGenerator.tickValues([startValue, endValue]);
+//     yAxisGenerator.ticks(4);
+//     yAxisGenerator.tickSize(-dimensions.boundW); //weißes 'grid'
+//     //yAxisGenerator.tickValues([startValue, endValue]);
 
-    yAxis = bounds.append('g')
-      .attr("class", "grid")
-      .call(yAxisGenerator);//führt generator methode aus
-
-
-    xAxisGenerator.ticks(2);
-    xAxisGenerator.tickValues([startDate, endDate]);
-    xAxisGenerator.tickFormat(d3.timeFormat("%d.%m"));
+//     yAxis = bounds.append('g')
+//       .attr("class", "grid")
+//       .call(yAxisGenerator);//führt generator methode aus
 
 
-    xAxis.transition().duration(1000).call(xAxisGenerator);
-    yAxis.transition().duration(1000).call(yAxisGenerator);
-    area.transition().duration(1000).call(areaGenerator);
+//     xAxisGenerator.ticks(2);
+//     xAxisGenerator.tickValues([startDate, endDate]);
+//     xAxisGenerator.tickFormat(d3.timeFormat("%d.%m"));
 
-    // d3.select("#wrapper").call(hover);
+
+//     xAxis.transition().duration(1000).call(xAxisGenerator);
+//     yAxis.transition().duration(1000).call(yAxisGenerator);
+//     area.transition().duration(1000).call(areaGenerator);
+
+//     // d3.select("#wrapper").call(hover);
     
 
-  }
+//   }
 
 
-  d3.select('#selectButton').on('change', updateX);
+//   d3.select('#selectButton').on('change', updateX);
 
   
   //draw peripherals
@@ -281,15 +268,3 @@ async function drawAreaChart(url, xA, yA, region) {
   /*-------------------------------------------------------------*/
 
 }
-
-
-
-
-
-
-
-
-
-
-
-

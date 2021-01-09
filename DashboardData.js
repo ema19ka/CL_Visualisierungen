@@ -23,7 +23,7 @@
 
 
 let path = corsFix + url;
-let pathbool =true;
+let pathbool = true;
 
 //let accessBool = false; //checkt of file online geladen werden soll, wenn true = AN
 //let pathbool= false; 
@@ -72,7 +72,7 @@ yourMainCode(remoteData);
 function yourMainCode(remoteData) {
   
 read_from_local_storage();
-console.log("Array Example:", getDatumArr);
+// console.log("Array Example:", getDatumArr);
 
 
  const stringReplace = JSON.stringify(remoteData);
@@ -104,7 +104,9 @@ localStorage.setItem("Data", JSON.stringify(Datatrue));
 //Speichern des ETAGS im LocalStorage (zur Versionsüberprüfung, brauchen wir später)
 //var eTag = {eTagResponse};
 //localStorage.setItem("ETag", JSON.stringify(eTag));
-}
+
+
+}//Ende yourMainCode
 
 
 //_______Funktionen________________________________________
@@ -134,9 +136,9 @@ function read_from_local_storage() {
     dataOffline = items.items_json; //Ohne Speicherdatum 
     getSpeicherDatum = items.updateDate; //SpeicherDatum
     
-    console.log("Offline Items:" ,items); 
-    console.log("Offline Daten:" ,dataOffline); 
-    console.log("Die Daten wurden zuletzt im Local Storage gespeichert am (updateDate):" , getSpeicherDatum);
+    // console.log("Offline Items:" ,items); 
+    // console.log("Offline Daten:" ,dataOffline); 
+    // console.log("Die Daten wurden zuletzt im Local Storage gespeichert am (updateDate):" , getSpeicherDatum);
 
     for (i = 0; i < dataOffline.length; i ++){
     getDatum = dataOffline[i].datum;
@@ -169,13 +171,15 @@ function read_from_local_storage() {
     getAnzahlGeheiltSumArr.push(getAnzahlGeheiltSum);
 
  
+  
+     
 
 
 
   }
 
-   
-  
+  // console.log('test');  
+  // console.log(getDatumArr); 
 } else{
   //accessBool = true; //Wenn es die Daten nicht gibt dann starte den zugriff auf die online-Daten 
   pathbool = true; 
