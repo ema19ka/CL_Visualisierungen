@@ -19,7 +19,8 @@
  
  
  const url = 'https://covid19-dashboard.ages.at/data/CovidFaelle_Timeline.csv';
- const corsFix = 'https://cors-anywhere.herokuapp.com/';
+//  const corsFix = 'https://cors-anywhere.herokuapp.com/';
+ const corsFix = 'http://index.html/cors-anywhere';
 
 
 let path = corsFix + url;
