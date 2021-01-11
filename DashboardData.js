@@ -105,6 +105,7 @@ localStorage.setItem("Data", JSON.stringify(Datatrue));
 //var eTag = {eTagResponse};
 //localStorage.setItem("ETag", JSON.stringify(eTag));
 
+console.log(getDatumArr[getDatumArr.length - 1]); 
 
 }//Ende yourMainCode
 

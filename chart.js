@@ -268,3 +268,11 @@ async function drawAreaChart(xA, yA, region, range) {
   /*-------------------------------------------------------------*/
 
 }
+
+async function getHardfact(region, type){
+
+  let ort = region; 
+  let typ = type; 
+
+  console.log(dataOffline[0]); 
+}
